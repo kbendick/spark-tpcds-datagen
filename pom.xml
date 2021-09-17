@@ -325,7 +325,8 @@
             </goals>
             <configuration>
               <finalName>${project.artifactId}-${project.version}-with-dependencies</finalName>
-              <outputDirectory>${project.parent.build.directory}</outputDirectory>
+              <!-- For some reason this is placing into my .m2 directory when I want it to go to /target -->
+              <!-- <outputDirectory>${project.parent.build.directory}</outputDirectory> -->
               <minimizeJar>false</minimizeJar>
               <createDependencyReducedPom>false</createDependencyReducedPom>
               <artifactSet>
